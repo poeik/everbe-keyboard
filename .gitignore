@@ -1,2 +1,5 @@
 **/*.lck # kicad files
+**/*.kicad_pro
+**/*.kicad_prl
+gerber*
 .DS_Store
