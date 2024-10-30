@@ -83,13 +83,6 @@ points:
             origin: [-9.5, -9]
             column_net: P017
             row_net: P113  # Same row net if desired
-
-    #   rows:
-    #     thumb:
-  # rotate: -5
-  #mirror:
-   # ref: matrix_pinky_home
-    # distance: 223.7529778
 outlines:
   keys:
     - where: true
@@ -97,22 +90,17 @@ outlines:
       size: [14, 14]
       fillet: 0
   board_left:
-    - where: true
+    - where: /^matrix_.*|^thumb/
       what: rectangle
       size: [px, py]
-      fillet: 2
-  xl_board_left:
+      fillet: 1
+  xl_board:
     - where: true
       what: rectangle
       size: [px+2, py+2]
       fillet: 2
-  board_right:
-    - where: true
-      what: rectangle
-      size: [px, py]
-      fillet: 1
   xl_board_key_cutouts:
-    - name: xl_board_left
+    - name: xl_board
     - operation: subtract
       name: keys
 
@@ -124,7 +112,7 @@ pcbs:
     footprints:
       choc_hotswap:
         what: choc
-        where: /^matrix_.*|thumb/
+        where: /^matrix_.*|^thumb/
         params:
           keycaps: true
           reverse: false
@@ -283,4 +271,3 @@ cases:
   plate:
     - name: xl_board_key_cutouts
       extrude: 1.2
-
