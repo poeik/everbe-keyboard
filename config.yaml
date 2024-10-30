@@ -161,7 +161,7 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [7.8, -16.0]
+          shift: [7.8, -18.0]
           rotate: 90
       # Move another diode so it doesn't conflict with controller
       diode_weird2:
@@ -171,7 +171,7 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [7.8, -9.5]
+          shift: [7.8, -10.5]
           rotate: 90
       diode_weird3:
         what: diode
@@ -236,7 +236,7 @@ pcbs:
         what: slider
         where:
             ref: matrix_sixth_top
-            shift: [10.8, -6.0]
+            shift: [10.8, -10.0]
             rotate: -90
         params:
             side: B
