@@ -137,7 +137,7 @@ pcbs:
       # Main diodes
       diode_main:
         what: diode
-        where: /^matrix_(?!(?:sixth_top|sixth_home|third_home|first_num|fourth_top|fourth_mod|first_home)).*/
+        where: /^matrix_(?!(?:sixth_top|sixth_home|sixth_num|third_home|first_num|fourth_top|fourth_mod|first_home)).*/
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
@@ -173,6 +173,15 @@ pcbs:
         adjust:
           shift: [7.8, -9.5]
           rotate: 90
+      diode_weird3:
+        what: diode
+        where: matrix_sixth_num
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [8.3, -2.5]
+          rotate: 90
 
       diode_mounting_hole_conflict1:
         what: diode
@@ -198,7 +207,7 @@ pcbs:
           orientation: up
         where:
           ref: matrix_sixth_num
-          shift: [-9, -1.5]
+          shift: [-6.5, -1.5]
           rotate: -180.0
       # Battery jack
       jstph:
@@ -259,12 +268,11 @@ pcbs:
         where:
           ref: matrix_fourth_bottom
           shift: [-pushX, pushY]
-      # Write "Caldera" on the PCB
       front_text: &text
         what: text
         where: &textWhere
             ref: matrix_fourth_num
-            shift: [-8.7, 5.5]
+            shift: [-7.5, 5.5]
         params: &textParams
             text: everbe
             justify: left
@@ -275,3 +283,4 @@ cases:
   plate:
     - name: xl_board_key_cutouts
       extrude: 1.2
+
