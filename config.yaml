@@ -26,6 +26,12 @@ points:
   zones:
     matrix:
       columns:
+        zeroth:
+          rows:
+              num.skip: true
+              mod.skip: true
+          key:
+            column_net: P106
         first:
           key:
             stagger: 0
@@ -411,7 +417,7 @@ pcbs:
         what: text
         where: &textWhere
             ref: mirror_matrix_fourth_num
-            shift: [-8.7, 5.5]
+            shift: [7.5, 5.5]
         params: &textParams
             text: everbe
             justify: left
@@ -422,3 +428,4 @@ cases:
   plate:
     - name: xl_board_key_cutouts
       extrude: 1.2
+
